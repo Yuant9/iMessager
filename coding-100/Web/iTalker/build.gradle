@@ -35,5 +35,10 @@ dependencies {
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
 
+    //tomcat
+   
+    compile group: 'org.apache.tomcat.maven', name: 'tomcat7-maven-plugin', version: '2.2'
+
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
