@@ -11,8 +11,7 @@ import butterknife.BindView;
 
 public class MainActivity extends Activity {
 
-    @BindView(R.id.txt_test)
-    TextView mTestText;
+
 
 
     @Override
@@ -23,7 +22,6 @@ public class MainActivity extends Activity {
     @Override
     protected void initWidget(){
         super.initWidget();
-        mTestText.setText("Test Hello");
 
 
     }
