@@ -8,44 +8,49 @@
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
-        android:backgroundTint="@color/lime_400"
+        android:elevation="@dimen/len_2"
+        android:outlineProvider="bounds"
         android:layout_width="match_parent"
         android:layout_height="@dimen/actionBarWithStatusBarSize">
 
         <FrameLayout
 
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/statusBarSize"
-            android:layout_width="match_parent">
+            android:layout_marginTop="@dimen/statusBarSize">
 
             <net.yuan.italker.common.widget.PortraitView
+                android:id="@+id/im_portrait"
+                android:layout_width="@dimen/len_40"
                 android:layout_height="@dimen/len_40"
                 android:layout_margin="@dimen/len_4"
-                android:layout_width="@dimen/len_40"
-                android:src="@drawable/default_portrait"/>
+                android:src="@drawable/default_portrait"
+                android:scaleType="centerCrop"/>
 
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/txt_title"
+                android:layout_width="86dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/app_name"
-                android:textColor="@color/black_alpha_160"
+                android:textColor="@color/grey_50"
+                android:textSize="24sp"
                 android:tint="@color/white" />
 
 
             <ImageView
+                android:id="@+id/im_search"
                 android:layout_width="48dp"
                 android:layout_height="44dp"
                 android:layout_gravity="end|center_vertical"
                 android:layout_margin="@dimen/len_4"
                 android:contentDescription="@string/app_name"
                 android:padding="@dimen/len_10"
+                android:scaleType="centerInside"
                 android:src="@drawable/ic_search"
-                android:tint="@color/white" />
-
-
+                android:tint="?attr/toolbarMenuIconColor" />
 
 
         </FrameLayout>
@@ -55,7 +60,7 @@
 
 
     <FrameLayout
-        android:id="@+id/lay_content"
+        android:id="@+id/lay_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/len_52"
@@ -64,22 +69,28 @@
 
 
     <net.qiujuer.genius.ui.widget.FloatActionButton
+                android:id="@+id/btn_action"
                 android:src="@drawable/ic_group_add"
                 android:tint="@color/white"
                 android:padding="@dimen/len_20"
                 app:gBackgroundColor="@color/light_green_400"
                 android:layout_width="@dimen/len_52"
                 android:layout_height="@dimen/len_52"
-                app:layout_anchor="@id/lay_content"
+                app:layout_anchor="@id/lay_container"
                 app:layout_anchorGravity="bottom|end"
                 android:layout_marginBottom="@dimen/len_68"
-                android:layout_marginEnd="@dimen/len_16"/>
+                android:layout_marginEnd="@dimen/len_16" />
 
     <android.support.design.widget.BottomNavigationView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/len_52"
                  android:layout_gravity="bottom"
-                 android:id="@+id/navigation"/>
+                 android:id="@+id/navigation"
+                 app:menu="@menu/navigation_items"
+                    app:itemIconTint="@color/text_nav"
+                    app:itemTextColor="@color/text_nav"
+                    android:elevation="@dimen/len_4"
+        />
 
 
 
