@@ -20,6 +20,7 @@ import net.qiujuer.genius.ui.widget.FloatActionButton;
 import net.yuan.italker.common.Common;
 import net.yuan.italker.common.app.Activity;
 import net.yuan.italker.common.widget.PortraitView;
+import net.yuan.italker.push.activities.AccountActivity;
 import net.yuan.italker.push.fragments.main.ActiveFragment;
 import net.yuan.italker.push.fragments.main.ContactFragment;
 import net.yuan.italker.push.fragments.main.GroupFragment;
@@ -111,7 +112,7 @@ public class MainActivity extends Activity implements BottomNavigationView.OnNav
 
     @OnClick(R.id.btn_action)
     void onActionClick(){
-
+        AccountActivity.show(this);
 
     }
 

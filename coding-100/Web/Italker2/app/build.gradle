@@ -5,7 +5,7 @@ android {
     defaultConfig {
         applicationId "net.yuan.italker.push"
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -35,4 +35,6 @@ dependencies {
     //recycler
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation project(':common')
+
+    implementation "com.yalantis:ucrop:$rootProject.ext.ucropVersion"
 }
